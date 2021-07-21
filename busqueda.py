@@ -2,7 +2,6 @@ import folium
 from pymongo import  MongoClient
 from folium.plugins import MarkerCluster
 from info import datos_falsos
-import os
 import subprocess
 
 def play(audio_file_path):
