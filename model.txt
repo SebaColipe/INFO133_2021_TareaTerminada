@@ -1,0 +1,2 @@
+La coleccion almacena documentos que en su interior contienen el nombre y apellido del usuario y el archivo .wav que subio, junto con la fecha de grabacion, duracion, ubicacion de grabacion (contiene la ciudad, latitud, longitud, y si lo grabo en un interior o exterior) y el nombre del archivo
+Este modelo corresponden al caso de la Prueba #0 de INFO133_2021 y corresponde a los datos de "Usuarios" y "Archivos audio" del Modelo Relacional
