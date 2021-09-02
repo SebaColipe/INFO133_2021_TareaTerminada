@@ -3,6 +3,7 @@ from pymongo import  MongoClient
 from folium.plugins import MarkerCluster
 from info import datos_falsos
 import subprocess
+import os
 
 def play(audio_file_path):
     subprocess.call(["ffplay", "-nodisp", "-autoexit", audio_file_path])
@@ -122,6 +123,7 @@ def mapa(): #pide la categoria (1 o 2) TIENE UNA FUNCION "DATOS_FALSOS()" QUE IN
 	mapa.add_child(mc)
 	nombre_mapa = "mapa_"+base+".html"
 	mapa.save(nombre_mapa)
+	return nombre_mapa
 
 def pedir_dia():
 	dia = input("Ingrese Fecha de grabación: \ndd/mm/aaaa\n")
@@ -154,8 +156,9 @@ def respuesta_audio(respuesta):
 		play(nombre_archivo)
 
 def main():
-	mapa()
+	nombre =mapa()
 	respuesta = input("¿Quiere reproducir un audio.wav?: Si , No: \n")
 	respuesta_audio(respuesta)
+	os.system("brave-browser "+nombre)
 	
 main()
